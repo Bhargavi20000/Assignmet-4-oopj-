@@ -1,0 +1,66 @@
+package in.acts.cdac;
+
+import java.util.Scanner;
+
+class Car
+{
+	String brand;
+	String model;
+	int price;
+	float mileage;
+	
+	public void acceptDetails()
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Brand of vehicle :");
+		this.brand = sc.next();
+		
+		System.out.println("Model of vehicle :");
+		this.model = sc.next();
+		
+		System.out.println("Price of vehicle :");
+		this.price = sc.nextInt();
+		
+		System.out.println("Mileage of vehicle :");
+		this.mileage = sc.nextFloat();
+	}
+	public void acceptDetails(String type, String model, int price)
+	{
+		this.brand = type;
+		this.model = model;
+		this.price = price;
+	}
+	public void printDetails(String model, int price)
+	{
+		System.out.println("Model :"+model);
+		System.out.println("Price :"+price);
+	}
+	public void printDetails() {
+		System.out.println("Brand :"+brand);
+		System.out.println("Model :"+model);
+		System.out.println("Price : "+price);
+		System.out.println("Mileage :"+mileage+ "km/ltr");
+	}
+}
+public class Vehicle {
+
+	public static void main(String[] args) {
+		Car details = new Car();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter details for first car :");
+		details.acceptDetails();
+		
+		System.out.println("\nEnter details for second car :");
+		details.acceptDetails("Tata", "Harrier", 2100000);
+		
+		System.out.println("\nDetails of first car :");
+		details.printDetails();
+		
+		System.out.println("\nDetails of second car :");
+		details.printDetails("Harrier", 2100000);
+		
+
+	}
+}

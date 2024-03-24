@@ -1,0 +1,41 @@
+package in.acts.cdac;
+
+public class Employee {
+
+    private String name;
+    private int age;
+    private double salary;
+
+    public Employee(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+    
+    public void printEmployeeDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+    }
+
+    public void printEmployeeDetails(int age) {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    public void printEmployeeDetails(double salary) {
+        System.out.println("Name: " + name);
+        System.out.println("Salary: " + salary);
+    }
+
+
+    public static void main(String[] args) {
+        Employee employee = new Employee("Ajay", 23, 50000);
+
+        employee.printEmployeeDetails();
+
+        employee.printEmployeeDetails(30);
+
+        employee.printEmployeeDetails(55000);
+    }
+}
